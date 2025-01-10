@@ -56,68 +56,67 @@ An intelligent agent platform that operates at the hardware level, capable of ex
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/169398/ai-agent-platform.git
-cd ai-agent-platform
+git clone https://github.com/169398/AI-Agent-Assistant
+cd AI-Agent-Assistant
 ```
 
 ### Install Dependencies
 
-```bash
 # Install frontend dependencies
+```bash
 cd frontend
 npm install
 ```
-
-```bash
 # Install backend dependencies
+```bash
 cd ../backend
 npm install
 ```
 
 ### Configure Environment
 
-```bash
 # Copy example environment files
+```bash
 cp frontend/.env.example frontend/.env.local
 cp backend/.env.example backend/.env
 ```
 
 ### Start Development Servers
 
-```bash
 # Start backend
+```bash
 cd backend
 npm run dev
 ```
-
-```bash
 # Start frontend (in a new terminal)
+```bash
 cd frontend
 npm run dev
 ```
-        
 ### Project Structure
-```
-- **ai-agent-platform/**
-  - **frontend/** - Next.js frontend application
-    - **components/** - Reusable React components 
-    - **pages/** - Next.js pages
-    - **public/** - Static assets
-  - **backend/** - Node.js backend server
-    - **src/**
-      - **native/** - Native addon source files
-      - **agents/** - Agent implementation
-      - **api/** - API routes
-    - **build/** - Compiled native addons
-  - **shared/** - Shared utilities and types
-```
+
+| Directory                  | Description                          |
+|----------------------------|--------------------------------------|
+| **ai-agent-platform/**     | Root directory of the project        |
+| **frontend/**              | Next.js frontend application         |
+| **frontend/components/**   | Reusable React components            |
+| **frontend/pages/**        | Next.js pages                        |
+| **frontend/public/**       | Static assets                        |
+| **backend/**               | Node.js backend server               |
+| **backend/src/**           | Source code for backend              |
+| **backend/src/native/**    | Native addon source files            |
+| **backend/src/agents/**    | Agent implementation                 |
+| **backend/src/api/**       | API routes                           |
+| **backend/build/**         | Compiled native addons               |
+| **shared/**                | Shared utilities and types           |
+
 
 ### 🤝 Contributing
 We welcome contributions! Please follow these steps:
-```
 
 ### Fork the repository
 ```bash
+
 git clone https://github.com/169398/ai-agent-platform.git
 cd ai-agent-platform
 ```
@@ -134,21 +133,17 @@ git commit -m 'Add amazing feature'
 git push origin feature/amazing-feature
 
 # Open a Pull Request
-```
 
- 
- 
 ### 🔧 Configuration
 
-The  platform can be configured through environment variables:
+The platform can be configured through environment variables:
 
-| Variable | Description | Default Value |
-|----------|-------------|---------------|
-| PORT | Backend server port | 3001 |
-| REDIS_URL | Redis connection URL | redis://localhost:6379 |
-| LOG_LEVEL | Logging verbosity level | debug |
+| Variable    | Description               | Default Value          |
+|-------------|---------------------------|------------------------|
+| `PORT`      | Backend server port       | `3001`                |
+| `REDIS_URL` | Redis connection URL      | `redis://localhost:6379` |
+| `LOG_LEVEL` | Logging verbosity level   | `debug`               |
 
-```
 
 ### Frontend Configuration
 ```bash
@@ -156,7 +151,6 @@ NEXT_PUBLIC_API_URL=http://localhost:3001
 NEXT_PUBLIC_WS_URL=ws://localhost:3001
 ```
 
-### 🔒 Security Considerations
 
 ## 🔒 Security Considerations
 - All system-level operations are sandboxed
